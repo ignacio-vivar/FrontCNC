@@ -71,20 +71,20 @@ function MaterialMobile() {
             />
             <Stack>
               <CardBody>
-                <Heading fontSize={"14px"}>{elem.title}</Heading>
-                <a href={getBook(elem.file)}>
-                  <IconButton
-                    aria-label="right-arrow"
-                    colorScheme="red"
-                    borderRadius="full"
-                    position="absolute"
-                    transform={"translate(5%, -95%)"}
-                    right={"5px"}
-                    zIndex={2}
-                  >
-                    <IoMdDownload />
-                  </IconButton>
-                </a>
+                <Flex alignItems={"center"} justifyContent={"center"}>
+                  <Heading fontSize={"14px"}>{elem.title}</Heading>
+                  <a href={getBook(elem.file)}>
+                    <IconButton
+                      aria-label="right-arrow"
+                      colorScheme="red"
+                      borderRadius="full"
+                      zIndex={2}
+                      m={2}
+                    >
+                      <IoMdDownload />
+                    </IconButton>
+                  </a>
+                </Flex>
               </CardBody>
             </Stack>
           </Card>
