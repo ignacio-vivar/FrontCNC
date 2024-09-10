@@ -23,7 +23,13 @@ function HamburgerMenuMobile() {
           variant="outline"
           icon={<Image src={MenuIcon} alt={"Menu-List"} />}
         />
-        <MenuList border={"1px solid black"} borderRadius={"15px"} mt={3} p={1}>
+        <MenuList
+          border={"1px solid black"}
+          borderRadius={"15px"}
+          mt={3}
+          p={1}
+          zIndex={5}
+        >
           <Flex
             direction={"column"}
             align={"center"}
