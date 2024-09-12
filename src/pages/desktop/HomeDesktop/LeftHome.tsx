@@ -39,7 +39,7 @@ function LeftHome() {
       <ul>
         <li>Email: ignacio.vivar.cruz@gmail.com</li>
         <li>Profesor: Juan José Ignacio Vivar Cruz</li>
-        <li>Institución: Colegio Saleasiano Dean Funes</li>
+        <li>Institución: Colegio Salesiano Dean Funes</li>
       </ul>
     </Box>
   );
