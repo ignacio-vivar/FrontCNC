@@ -22,10 +22,8 @@ function DesktopVideos() {
   const [data, setData] = useState<Videos[]>();
   const { fetchData } = useApi();
 
-  const fetchAPI = async (playlist_url: string) => {
-    const response = await fetchData<{ videos: Videos[] }>(
-      `/playlist/?playlist_url=${playlist_url}`
-    );
+  const fetchAPI = async () => {
+    const response = await fetchData<{ videos: Videos[] }>("/playlist/");
     if (response && response.videos) {
       setData(response.videos);
     } else {
@@ -33,12 +31,26 @@ function DesktopVideos() {
     }
   };
 
-  const URL_PLAYLIST =
-    "https://youtube.com/playlist?list=PLH-4iNiWPn8WVWdPd9czc9Qn_4QygebCK&si=JA0cVwnA6EW2i-vD";
-
   useEffect(() => {
-    fetchAPI(URL_PLAYLIST);
+    fetchAPI();
   }, [fetchData]);
+  // const fetchAPI = async (playlist_url: string) => {
+  //   const response = await fetchData<{ videos: Videos[] }>(
+  //     `/playlist/?playlist_url=${playlist_url}`
+  //   );
+  //   if (response && response.videos) {
+  //     setData(response.videos);
+  //   } else {
+  //     console.error("No hay respuesta");
+  //   }
+  // };
+
+  // const URL_PLAYLIST =
+  //   "https://youtube.com/playlist?list=PLH-4iNiWPn8WVWdPd9czc9Qn_4QygebCK&si=JA0cVwnA6EW2i-vD";
+
+  // useEffect(() => {
+  //   fetchAPI(URL_PLAYLIST);
+  // }, [fetchData]);
   return (
     <>
       <Stack>
